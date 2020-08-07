@@ -6,6 +6,7 @@
   --color-very-pale-cyan: hsl(193, 100%, 96%);
   --color-very-dark-cyan: hsl(192, 100%, 9%);
   --color-grayish-blue: hsl(208, 11%, 55%);
+  --color-white: #ffffff;
 
   --font-Poppins: 'Poppins', sans-serif;
   --font-OpenSans: 'Open Sans', sans-serif;
@@ -21,6 +22,7 @@ body {
   margin: 0;
   font-family: var(--font-OpenSans);
   font-size: 18px;
+  line-height: 1.5;
 }
 h1,
 h2,
@@ -38,25 +40,200 @@ img {
   height: auto;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
+a {
+  display: block;
+  text-decoration: none;
 }
 
-.header__logo {
-  display: block;
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
 }
+
+.hero > *,
+.services {
+  width: 90%;
+  margin: auto;
+}
+
+.hero {
+  background-image: url(./images/bg-hero-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-very-pale-cyan);
+  padding: 1.5em 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .header__logo > img {
-  height: 35px;
+  display: block;
+  height: 20px;
 }
 
 .button {
   display: inline-block;
-  color: var(--color-violet);
+  background-color: var(--color-pink);
+  color: var(--color-white);
   border: none;
-  padding: 0.5em;
-  width: 200px;
+  padding: 1em;
+  width: 250px;
   border-radius: 20px;
   cursor: pointer;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+.button--small {
+  width: 100px;
+  padding: 0.3em 0.6em;
+}
+.button--white {
+  background-color: var(--color-white);
+  color: black;
+}
+
+.mockups__description * + * {
+  margin-top: 2em;
+}
+.mockups__description {
+  text-align: center;
+  padding: 5em 1.2em 3em;
+}
+.mockups__description > h1 {
+  text-transform: capitalize;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.mockups__description > p {
+  font-size: 0.95em;
+  margin-top: 1.125em;
+}
+.mockups__figure {
+  padding: 0 1em;
+}
+
+.services {
+  margin-top: 4em;
+}
+.services > .services__item + .services__item {
+  margin-top: 2.5em;
+}
+
+.services__item {
+  width: 98%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 2em;
+  text-align: center;
+}
+.services__itemDescription {
+  color: var(--color-grayish-blue);
+}
+.services__itemDescription > h2 {
+  margin-top: 1.5em;
+  color: var(--color-very-dark-cyan);
+  font-size: 1.1em;
+}
+.services__itemDescription > p {
+  font-size: 0.72em;
+  margin-top: 1em;
+  line-height: 1.6;
+}
+
+.notification {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  margin-top: 6em;
+  margin-bottom: -3.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  padding: 2em 0.5em;
+}
+.notification > h3 {
+  margin-bottom: 1em;
+  font-size: 0.8em;
+}
+
+.footer {
+  background-color: var(--color-very-dark-cyan);
+  color: var(--color-very-pale-cyan);
+  padding: 7em 1em 2em;
+}
+.footer__contact > * {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5em;
+}
+.footer__contact img {
+  display: block;
+  margin-top: 0.3em;
+}
+.footer__contact p {
+  margin-left: 1em;
+  font-size: 0.85em;
+}
+.footer__contact p.tel,
+.footer__contact p.mail {
+  margin-left: 0.7em;
+}
+
+.footer a {
+  color: var(--color-very-pale-cyan);
+}
+
+.footer__nav {
+  padding: 2.5em 0;
+}
+.footer__nav li + li {
+  margin-top: 1em;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__social > ul {
+  display: flex;
+  margin-bottom: 2em;
+}
+.footer__social > ul > li + li {
+  margin-left: 0.5em;
+}
+
+.footer__social > ul > li > a {
+  display: inline-block;
+  color: var(--color-white);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5em;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.footer__social i {
+  font-size: 0.7em;
+  display: inline-block;
+  height: 100%;
+}
+
+.copyright {
+  font-size: 0.7em;
 }
